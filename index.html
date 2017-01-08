@@ -11,13 +11,13 @@
         <div id= "options-box">
             <h1>Locations</h1>
                 <input type="text" id="search-box" data-bind="textInput: locationSearch, valueUpdate: 'keypress', event: { keyup: function(){setMarker()} }" placeholder="enter location" autocomplete="off" />
-            <div class="hamburger" data-bind="click: slideToggle">
+            <div class="hamburger" data-bind="click: listToggle">
                 <img src="img/burger.png" alt="hamburger icon">
             </div>
             <div id="listing">
-                <ul data-bind="foreach: locations">
-                    <li data-bind="visible: visible, attr: {id: id}">
-                        <span class="list-items" data-bind="text: title"></span>
+                <ul class="unlist" data-bind="foreach: locations">
+                    <li class="list-items" data-bind="visible: visible, attr: {id: id}">
+                        <span class="list-data" data-bind="text: title"></span>
                     </li>
                 </ul>
             </div>

@@ -17,13 +17,13 @@ body,html {
     background: grey;
 }
 
-#listing ul {
+.unlist {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-#listing ul li {
+.list-items {
     cursor: pointer;
     padding: 8px 5px;
 }
@@ -33,7 +33,7 @@ body,html {
     padding: 5px 5px;
 }
 
-.list-items {
+.list-data {
     color: white;
     font-weight: bold;
     display: block;

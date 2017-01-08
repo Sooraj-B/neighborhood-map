@@ -150,8 +150,8 @@ function initMap() {
     ];
 
     var bounds = new google.maps.LatLngBounds(
-        new google.maps.LatLng(11.487763, 73.778687), //SW coordinates
-        new google.maps.LatLng(17.385044, 78.486671) //NE coordinates
+        new google.maps.LatLng(11.487763, 73.778687), //SW
+        new google.maps.LatLng(17.385044, 78.486671) //NE
     );
     map = new google.maps.Map(document.getElementById("map"), {
         center: {lat: 14.466344, lng: 75.923840},
@@ -205,8 +205,7 @@ function displayMarkers() {
                 dataType: "jsonp"
             }).done(function(response){
                 var article = response[2][0];
-                    locations[i].contentString =
-                    '<strong>'+ locations[i].title + '</strong><p>' + article +'</p>';
+                    locations[i].contentString ='<strong>'+ locations[i].title + '</strong><p>' + article +'</p>';
                     clearTimeout(wikiTimer);
             });
         })(i);
@@ -242,7 +241,7 @@ function displayMarkers() {
 }
 
 /* List customisation */
-function slideToggle() {
+function listToggle() {
     $(this).toggleClass("toggled");
     $( "#listing" ).toggle( "fast", function() {
     });
