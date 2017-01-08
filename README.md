@@ -1,8 +1,10 @@
-** Neighborhood Map Project **
+**Neighborhood Map Project**
 
 ##How to run the application?
 
-1. Download the zip file from github
-2. Run `index.html`
-3. Here is the live link to the website
+*Download the zip file from github repository [here](https://github.com/Sooraj-B/neighborhood-map)
+* Run `index.html`
+* Here is the live link to the website [here](https://sooraj-b.github.io/neighborhood-map/)
+
+##Third Party API used : **Wikipedia API**
 
