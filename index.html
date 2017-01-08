@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Neighborhood Map</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <section id="map"></section>
+        <div id= "options-box">
+            <h1>Locations</h1>
+                <input type="text" id="search-box" data-bind="textInput: locationSearch, valueUpdate: 'keypress', event: { keyup: function(){setMarker()} }" placeholder="enter location" autocomplete="off" />
+            <div class="hamburger" data-bind="click: slideToggle">
+                <img src="img/burger.png" alt="hamburger icon">
+            </div>
+            <div id="listing">
+                <ul data-bind="foreach: locations">
+                    <li data-bind="visible: visible, attr: {id: id}">
+                        <span class="list-items" data-bind="text: title"></span>
+                    </li>
+                </ul>
+            </div>
+            <!-- Error message -->
+            <div class="wiki-error"></div>
+            <div class="map-error"></div>
+        </div>
+        <script src="js/lib/jquery.min.js"></script>
+        <script src="js/lib/knockout-3.4.0.js"></script>
+        <script src="js/script.js"></script>
+        <script async defer src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBzfxVaehTxOtRpMBz10JwmcCpxOUeXVV4&v=3&callback=initMap">
+        </script>
+    </body>
+</html>

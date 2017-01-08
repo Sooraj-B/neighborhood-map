@@ -1,0 +1,74 @@
+body,html {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    width: 100%;
+    display: block;
+    height: 100%;
+    position: absolute;
+}
+
+#options-box {
+    width: 50%;
+    padding: 0 5% 0 0;
+    position: absolute;
+    background: grey;
+}
+
+#listing ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#listing ul li {
+    cursor: pointer;
+    padding: 8px 5px;
+}
+
+#search-box {
+    border: 1px solid black;
+    padding: 5px 5px;
+}
+
+.list-items {
+    color: white;
+    font-weight: bold;
+    display: block;
+    padding: 0 0 5px 0;
+}
+
+.wiki-error, .map-error{
+    padding: 0 2%;
+    font-weight: bold;
+    background: red;
+    line-height: 2;
+    color: white;
+}
+
+.hamburger {
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    right: 5%;
+}
+
+.toggled {
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+@media screen and (min-width: 768px) {
+    #map {
+        width: 100%;
+    }
+    #options-box{
+        width: 15%;
+        padding: 0 5% 0 0;
+        position: absolute;
+        background: grey;
+    }
+}
