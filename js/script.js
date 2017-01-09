@@ -217,23 +217,9 @@ function displayMarkers() {
                place.setAnimation(google.maps.Animation.BOUNCE);
                 setTimeout(function() {
                     place.setAnimation(null);
-                }, 1300);
+                }, 1400);
                 largeInfowindow.setContent(locations[i].contentString);
                 largeInfowindow.open(map,this);
-                map.setZoom(8);
-            };
-        })(locations[i].marker, i));
-
-        /* info window access from listings*/
-        var searchNav = $('#loc' + i);
-        searchNav.click((function(place, i) {
-            return function() {
-                place.setAnimation(google.maps.Animation.BOUNCE);
-                setTimeout(function() {
-                    place.setAnimation(null);
-                }, 1300);
-                largeInfowindow.setContent(locations[i].contentString);
-                largeInfowindow.open(map,place);
                 map.setZoom(8);
             };
         })(locations[i].marker, i));
@@ -250,7 +236,7 @@ function listToggle() {
 /* View model */
 function viewModel() {
     var self = this;
-    this.locationSearch = ko.observable('');
+    self.locationSearch = ko.observable('');
     ko.computed(function() {
         var search = self.locationSearch().toLowerCase();
         return ko.utils.arrayFilter(locations, function(loc) {
@@ -264,6 +250,9 @@ function viewModel() {
             }
         });
     });
+    self.showInfoWindow = function(place) {
+            google.maps.event.trigger(place.marker, 'click');
+    };
 };
 
 // Activating knockout

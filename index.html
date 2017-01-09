@@ -17,7 +17,7 @@
             <div id="listing">
                 <ul class="unlist" data-bind="foreach: locations">
                     <li class="list-items" data-bind="visible: visible, attr: {id: id}">
-                        <span class="list-data" data-bind="text: title"></span>
+                        <span class="list-data" data-bind="text: title, click: $parent.showInfoWindow"></span>
                     </li>
                 </ul>
             </div>
