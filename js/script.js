@@ -56,8 +56,8 @@ var locations = [
 
 // google maps error function
 var mapTimer = setTimeout(function() {
-    $('.map-error').html('Google Maps ERROR!');
-}, 7000);
+    $('.map-error').html('Map ERROR!');
+}, 5000);
 
 /* Initializing map*/
 function initMap() {
@@ -148,7 +148,7 @@ function initMap() {
             ]
         }
     ];
-
+    clearTimeout(mapTimer);
     var bounds = new google.maps.LatLngBounds(
         new google.maps.LatLng(11.487763, 73.778687), //SW
         new google.maps.LatLng(17.385044, 78.486671) //NE
@@ -178,7 +178,7 @@ function setMarker() {
         }
     }
 }
-clearTimeout(mapTimer);
+// clearTimeout(mapTimer);
 /* Creating markers */
 function displayMarkers() {
     var image = 'img/mark.png';
